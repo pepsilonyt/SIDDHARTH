@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Facts</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #fact {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nike Fun Facts</h1>
+        <p id="fact"></p>
+        <button id="showFact">Show Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            {
+                "fact": "Nike's iconic swoosh logo was designed by a graphic design student for just $35"
+            },
+            {
+                "fact": "The first Nike shoe, the 'Nike Waffle Trainer,' was inspired by the waffle iron pattern used by Bill Bowerman, Nike's co-founder, to improve traction on running shoes"
+            },
+            {
+                "fact": "Nike's Air Force 1 was originally designed as a basketball shoe but gained immense popularity as a streetwear staple"
+            },
+            {
+                "fact": "The 'Just Do It' slogan was inspired by the last words of a convicted murderer, Gary Gilmore, who said, 'Let's do it'"
+            },
+            {
+                "fact": "Michael Jordan's signature shoe, the Air Jordan 1, was banned by the NBA for its 'non-regulation' color scheme, leading to a marketing boom"
+            },
+            {
+                "fact": "Nike's 'Flyknit' technology, used in many running shoes, is made from a single piece of yarn, reducing waste and offering a sock-like fit"
+            },
+            {
+                "fact": "Nike's 'Vaporfly' running shoes have been controversial for their performance-enhancing capabilities, with some athletes accusing them of giving an unfair advantage"
+            },
+            {
+                "fact": "Nike's 'Mag' sneakers, featured in the movie 'Back to the Future II,' became a reality in 2016 with self-lacing technology"
+            },
+            {
+                "fact": "Nike sponsors some of the world's most famous athletes, including LeBron James, Serena Williams, and Cristiano Ronaldo"
+            },
+            {
+                "fact": "Nike's 'Self-lacing' technology, initially showcased in the 'Mag' sneakers, is now available in some of their latest running and basketball shoes"
+            }
+        ];
+
+        const factElement = document.getElementById('fact');
+        const showFactButton = document.getElementById('showFact');
+
+        showFactButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factElement.textContent = facts[randomIndex].fact;
+        });
+    </script>
+</body>
+</html>
